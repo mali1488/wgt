@@ -1,0 +1,18 @@
+<div ng-cloak style="padding-left:100px;padding-right:100px;padding-top:20px">
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="{{year}}" ng-click="fetchPictures(year)" ng-repeat="year in years">
+        <md-content class="md-padding">
+        	<h1 class="md-display-2">{{year}}</h1>
+        		<div class='md-padding' layout="row" layout-wrap style="opacity: 0.9;" >
+		   			<md-card style="width: 200px;height:200px" ng-repeat="imga in imagess" ng-click="resizeImg(imga)">
+		      			<img height="200px" width="200px" src={{imga}} class="md-card-image" >
+					</md-card>
+				</div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+
+

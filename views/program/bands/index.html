@@ -1,0 +1,18 @@
+<div class='md-padding' layout="row" layout-wrap style="opacity: 0.9;" >
+    <md-card style="width: 250px;" ng-repeat="b in bands" >
+      	<img height="150px" width="250px" src={{b.bandUrl}} class="md-card-image">
+      		<md-card-content >
+		        <h2 align="center">{{b.band}}</h2>
+			        <p style="opacity: 1.0;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+			</md-card-content>
+      	<div class="md-actions" layout="row" layout-align="end center">
+	        <md-button href="https://www.random.se">Official</md-button>
+	        <md-button class="btn1" href="https://www.facebook.com">
+	    		<md-icon md-svg-src="img/icon/facebook-logo.svg"></md-icon>
+	    	</md-button>
+	        <md-button class="btn1" href="https://www.soundcloud.com">
+		        <md-icon md-svg-src="img/icon/soundcloud.svg"></md-icon>
+		    </md-button>
+	    </div>
+	</md-card>
+</div>
