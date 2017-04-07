@@ -1,2 +1,0 @@
-# wgt
-wgt homepage remake

@@ -1,7 +1,0 @@
-angular.module('wgt')
-
-.controller('newsCtrl',['$scope' , '$rootScope', function($scope,$rootScope) {
-	$scope.news = [ {date: "2016-02-29" ,header: "Lorem news", text: "Brisket picanha pork chop tongue capicola. Meatball pork chop landjaeger brisket jerky boudin capicola frankfurter turkey sausage fatback. Chicken sirloin ham hock meatball shoulder pastrami turducken pancetta doner short ribs salami short loin jerky cupim pork loin. Drumstick cupim sirloin ribeye, picanha porchetta prosciutto andouille short ribs landjaeger pork chop flank swine corned beef brisket. Tenderloin fatback boudin tail prosciutto pastrami kevin swine picanha beef spare ribs short loin." }, 
-					{date: "2016-02-23" ,header: "Bacon News", text: "Bacon ipsum dolor amet alcatra ham kielbasa, meatloaf shank pork chop tongue frankfurter sausage beef porchetta. Pork belly pork fatback chicken jowl cupim, pancetta porchetta flank filet mignon shankle strip steak meatloaf beef ribs. Salami sausage chicken t-bone drumstick. Tongue tenderloin biltong rump, hamburger chuck bresaola meatloaf. Kielbasa brisket beef ribs pork loin venison flank, pork belly t-bone. Alcatra picanha brisket, tail shank filet mignon shoulder. Pig tri-tip salami, corned beef sirloin swine sausage tenderloin cupim andouille t-bone meatball prosciutto shankle pork belly."}];
-
-}]);
