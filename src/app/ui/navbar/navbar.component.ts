@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { List } from 'immutable';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() buttons: List<NavbarButton>;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {console.warn(this.buttons);}
 
+}
+
+export interface NavbarButton {
+  link: string;
+  title: string;
 }

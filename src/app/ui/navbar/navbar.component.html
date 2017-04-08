@@ -2,10 +2,14 @@
   <div class="container">
     <div class="nav-left">
       <a class="nav-item" [routerLink]="['/dashboard']">
-        <img src="./assets/navbaricon.png" alt="Bulma logo">
+        <img src="./assets/navbaricon.png" alt="wgt logo">
       </a>
-      <a routerLink="/lel" routerLinkActive="is-active" class="nav-item is-tab is-hidden-mobile">HOME</a>
-      <a class="nav-item is-tab is-hidden-mobile" routerLinkActive="is-active" [routerLink]="['/scenes']">SCENES</a>
+      <a *ngFor="let button of buttons" 
+          routerLink="{{'/' + button.link}}" 
+          routerLinkActive="is-active" 
+          class="nav-item is-tab is-hidden-mobile">
+          {{button.title}}
+      </a>
     </div>
     <span class="nav-toggle">
       <span></span>
@@ -13,9 +17,12 @@
       <span></span>
     </span>
     <div class="nav-right nav-menu">
-      <a routerLink="/lel" class="nav-item is-tab is-hidden-tablet is-active">HOME</a>
-      <a class="nav-item is-tab is-hidden-tablet">SCENES</a>
-
+      <a *ngFor="let button of buttons" 
+          routerLink="{{'/' + button.link}}" 
+          routerLinkActive="is-active" 
+          class="nav-item is-tab is-hidden-tablet is-active">
+        {{button.title}}
+      </a>
     </div>
   </div>
 </nav>

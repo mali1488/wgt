@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   exports: [
     NavbarComponent
   ],
+  providers: [],
   declarations: [NavbarComponent]
 })
 export class UiModule { }

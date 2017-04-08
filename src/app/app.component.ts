@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as Moment from 'moment';
+import { NavbarButton } from './ui/navbar/navbar.component';
+import { List } from 'immutable';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,12 @@ import * as Moment from 'moment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  date = null;
+  private navbarButtons: List<NavbarButton>;
 
   constructor() {
-    this.date = Moment().format("YYYY-MM-DD");
+    this.navbarButtons = List<NavbarButton>([
+      {link: 'dashboard', title: 'HOME'},
+      {link: 'scenes', title: 'SCENES'}
+    ]);
   }
 }
