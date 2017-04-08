@@ -7,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+// Modules
+import { UiModule } from './ui/ui.module';
+
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
@@ -22,6 +25,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    UiModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
