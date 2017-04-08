@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ScenesService, IScene } from '../services/scenes.service';
+import { List } from 'immutable';
 
 @Component({
   selector: 'app-scenes',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenesComponent implements OnInit {
 
-  constructor() { }
+  private scenes: List<IScene> = List<IScene>();
 
-  ngOnInit() {
+  constructor(private _scenesService: ScenesService) {
+    this.scenes = this._scenesService.getScenes();
+    this._scenesService.onChange(this.onChangeScenes);
   }
+
+  private onChangeScenes = () => {
+    this.scenes = this._scenesService.getScenes();
+  }
+
+  ngOnInit() {}
 
 }

@@ -13,7 +13,6 @@ export class DashboardComponent implements OnInit {
 
   constructor(private _dashBoardService: DashboardService) {
     this.news = this._dashBoardService.getNews();
-    console.warn('before emit: ', this.news);
     this._dashBoardService.onChange(this.onChangeNews);
   }
 

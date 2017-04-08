@@ -2,11 +2,26 @@
     color: white;
 }
 
+.nav-item a.is-tab:hover, a.nav-item.is-tab:hover {
+    color: white;
+    border-bottom: 5px solid darkorange;
+}
+
 .nav .is-active {
-    color: black;
-    border-bottom: 3px solid black;
+    color: darkgrey;
+    border-bottom: 5px solid darkorange;
 }
 
 .nav {
-    background-color: darkgray;
+    background-color: black;
+}
+
+.navbar-header-font {
+    font-family: gothic;
+    font-size: 2.5rem;
+}
+
+@font-face {
+    font-family: gothic;
+    src: url(../../../assets/fonts/SketchGothicSchool.ttf);
 }

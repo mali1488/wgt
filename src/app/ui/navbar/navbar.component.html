@@ -1,8 +1,8 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item" [routerLink]="['/dashboard']">
-        <img src="./assets/navbaricon.png" alt="wgt logo">
+      <a class="nav-item navbar-header-font" [routerLink]="['/dashboard']">
+        WGT-Planner
       </a>
       <a *ngFor="let button of buttons" 
           routerLink="{{'/' + button.link}}" 
