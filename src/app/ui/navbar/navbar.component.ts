@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {console.warn(this.buttons);}
+  ngOnInit() {}
 
 }
 

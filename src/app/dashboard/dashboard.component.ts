@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService, DashboardNews } from '../services/dashboard.service';
+import { List } from 'immutable';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  private news: List<DashboardNews>;
 
-  ngOnInit() {
+  constructor(private _dashBoardService: DashboardService) {
+    this.news = this._dashBoardService.getNews();
+    console.warn('before emit: ', this.news);
+    this._dashBoardService.onChange(this.onChangeNews);
   }
+
+  private onChangeNews = () => {
+    this.news = this._dashBoardService.getNews();
+  }
+
+  ngOnInit() {}
 
 }
