@@ -1,0 +1,12 @@
+.nav-item {
+    color: white;
+}
+
+.nav .is-active {
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.nav {
+    background-color: darkgray;
+}

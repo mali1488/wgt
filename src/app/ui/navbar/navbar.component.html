@@ -1,3 +1,21 @@
-<p>
-  navbar works!
-</p>
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item" [routerLink]="['/dashboard']">
+        <img src="./assets/navbaricon.png" alt="Bulma logo">
+      </a>
+      <a routerLink="/lel" routerLinkActive="is-active" class="nav-item is-tab is-hidden-mobile">HOME</a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLinkActive="is-active" [routerLink]="['/scenes']">SCENES</a>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+      <a routerLink="/lel" class="nav-item is-tab is-hidden-tablet is-active">HOME</a>
+      <a class="nav-item is-tab is-hidden-tablet">SCENES</a>
+
+    </div>
+  </div>
+</nav>

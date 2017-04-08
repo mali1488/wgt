@@ -6,12 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { NavbarComponent } from './ui/navbar/navbar.component';
 // Modules
 import { UiModule } from './ui/ui.module';
+import { ScenesComponent } from './scenes/scenes.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'scenes', component: ScenesComponent },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: DashboardComponent },
 ];
@@ -19,7 +21,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    ScenesComponent
   ],
   imports: [
     BrowserModule,
